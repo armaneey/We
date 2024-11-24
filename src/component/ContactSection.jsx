@@ -19,8 +19,8 @@ const ContactSection = () => {
   };
 
   return (
-    <div className=" max-w- w-full mx-auto p-6 flex items-center justify-center  w-100vh h-100vh bg-gray-100">
-      <form onSubmit={handleSubmit} className="bg-white p-8 shadow-md rounded-lg max-w-md" >
+    <div className="bg-white py-12 px-6  h-[750px] md:px-20 lg:px-40  mb-0">
+      <form onSubmit={handleSubmit} className="max-w-3xl mx-auto space-y-6" >
     
 
         <div className="mb-6"> 
@@ -28,7 +28,7 @@ const ContactSection = () => {
             FULL NAME
           </label>
 
-          <input type="text" id="fullName"name="fullName" value={formData.fullName} onChange={handleChange}
+          <input type="text" id="fullName"name="fullName" value={formData.fullName} onChange={handleChange}style={{ height: "90px" }}
             className="mt-1 block w-full border-b border-gray-400 focus:border-black focus:ring-0 outline-none"/>
         </div>
 
@@ -37,8 +37,8 @@ const ContactSection = () => {
             EMAIL ADDRESS
           </label>
 
-          <input type="email" id="email" name="email" value={formData.email} onChange={handleChange}
-            className="mt-1 block w-full border-b border-gray-400 focus:border-black focus:ring-0 outline-none" />
+          <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} style={{ height: "95px" }}
+            className="mt-1 block w-full h-15 border-b border-gray-400 focus:border-black focus:ring-0 outline-none" />
         </div>
 
         <div className="mb-6">
@@ -46,8 +46,8 @@ const ContactSection = () => {
             MESSAGE
           </label>
 
-          <textarea id="message" name="message" rows="4" value={formData.message} onChange={handleChange}
-            className="mt-1 block w-full border-b border-gray-700 focus:border-black focus:ring-0 outline-none resize-none" ></textarea>
+          <textarea id="message" name="message" rows="10" value={formData.message} onChange={handleChange} style={{ height: "250px" }}
+            className="mt-1 block w-full h-32 border-b border-gray-700 focus:border-black focus:ring-0 outline-none resize-none" ></textarea>
         </div>
 
         <div className="mb-6 flex items-start">
@@ -60,7 +60,7 @@ const ContactSection = () => {
               Privacy Policy</a> . </label>
         </div>
 
-        <button type="submit" className="w-full bg-[#003255] text-white py-3 font-bold text-lg hover:bg-[#001F3D] transition duration-300" >
+        <button type="submit" className="w-[800px]  h-[95px] bg-[#003255] text-white py-3 px-6 rounded-[5px] font-bold text-lg hover:bg-[#001F3D] transition duration-300" >
           SEND MESSAGE
         </button>
       </form>
